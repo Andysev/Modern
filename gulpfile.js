@@ -4,15 +4,30 @@ browserSync = require('browser-sync'),
 uglify = require('gulp-uglify'),
 concat = require('gulp-concat'),
 rename = require('gulp-rename');
+const autoPrefixer = require('gulp-autoprefixer');
 
 
 gulp.task('scss', function(){
 	return gulp.src('app/scss/**/*.scss')
 	 .pipe(sass({outputStyle: 'compressed'}))
 	 .pipe(rename({suffix: '.min'}))
+	 .pipe(autoPrefixer({
+		 overriderBrowerslist: ['last 8 versions']
+	 }))
 	 .pipe(gulp.dest('app/css'))
 	 .pipe(browserSync.reload({stream: true}))
 });
+
+gulp.task('css', function(){
+	return gulp.src([
+	  'node_modules/normalize.css/normalize.css',
+	  'node_modules/slick-carousel/slick/slick.css',
+	  'node_modules/magnific-popup/dist/magnific-popup.css'
+	])
+	  .pipe(concat('_libs.scss'))
+	  .pipe(gulp.dest('app/scss'))
+	  .pipe(browserSync.reload({stream: true}))
+  });
 
 gulp.task('html', function(){
 	return gulp.src('app/*.html')
@@ -46,4 +61,4 @@ gulp.task('watch', function(){
 
 
 
-gulp.task('default', gulp.parallel('scss', 'js', 'browser-sync', 'watch'))
+gulp.task('default', gulp.parallel('css', 'scss', 'js', 'browser-sync', 'watch'))
