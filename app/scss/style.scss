@@ -4,7 +4,12 @@
 @import 'fonts';
 
 // start header
-
+.header{
+    z-index: 5;
+}
+.topwhite{
+    background-color: #fff;
+}
 .header_top_inner{
     display: flex;
     justify-content: space-between;
@@ -30,7 +35,8 @@
 .header_btn-login{
     background-color: $green;
 }
-.header_btn-register{
+.header_btn-register,
+.header_btn-logout{
     background-color: $red;
     margin-left: 7px;
 }
@@ -54,7 +60,254 @@
         font-size: 14px;
     }
 }
+.header_circle{
+    &.active{
+        display: block;
+    }
+    display: none;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background-color: #f5f5f5;
+    font-family: 'icomoon';
+    position: relative;
+    &::before{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #a0a0a0;
+        font-size: 14px;
+    }
+   
+    span{
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 18px;
+        right: -6px;
+        top: -6px;
+        font-size: 11px;
+        color: #fff;
+    }
+}
+.header_box{
+    display: flex;
+    align-items: center;
+}
+.notification{
+    span{
+        background-color: $yellow;
+    }
+}
+.message{
+    span{
+        background-color: $tomate;
+    }
+}
+.basket{
+    span{
+        background-color: $green;
+    }
+}
+.header_btn-login--off{
+    display: none;
+}
+.header_btn-logout{
+    display: none;
+    &.header_btn-login--on{
+        display: block;
+    }
+}
+.user{
+    margin-left: 20px;
+    margin-right: 25px;
+    padding-right: 20px;
+    position: relative;
+    &::before{
+        position: absolute;
+        content: "\f0d7";
+        font-family: 'icomoon';
+        font-size: 16px;
+        color: #707070;
+        top: 0;
+        right: 0;
+    }
+  &_inner{
+      display: flex;
+      align-items: center;
+  }
+  &_images{
+      margin-right: 15px;
+      width: 32px;
+      height: 34px;
+      overflow: hidden;
+      border-radius: 50%;
+  }
+  &_info{
+    line-height: 24px;
+    font-size: 14px;
+  }
+  &_name{
+    @include f500;
+    color: #222;
+  }
+  &_money{
+    color: $green;
+    @include f700;
+  }
+}
+.user_menu{
+    transition: all .3s;
+    height: 0;
+    overflow: hidden;
+    top: 69px;
+    left: 20px;
+    width: 158px;
+    position: absolute;
+    background-color: #fff;
+    padding: 0 20px;
+    a{
+        font-size: 12px;
+        color: #546e7a;
+        margin-bottom: 15px;
+    }
+}
+.user_box{
+    position: relative;
+    height: 90px;
+    margin-top: 42px;
+    &:hover{
+        .user_menu{
+           height: auto;
+           padding: 20px;
+           overflow: auto;
+        }
+    }
+}
+.circle_menu{
+    top: 62px;
+    right: 0;
+    transition: all .3s;
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    transition: all .3s;
+    z-index: 1;
+}
+.basket_box,
+.message_box,
+.notification_box{
+    position: relative;
+    height: 90px;
+    margin-top: 54px;
+    margin-left: 15px; 
+    &:hover{
+        .hedader_circle::before{
+            color: $bg;
+        }
+        .circle_menu{
+            overflow: visible;
+            height: 100%;
+        }
+        .circle_item{
+            padding: 23px;
+        }
+    }
+}
+.circle_item{
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-top: none;
+    border-left-width: 1px;
+    border-right-width: 1px;
+    padding: 0 23px;
+    display: flex;
+    align-items: center;
+    width: 269px;
+    position: relative;
+    &::before{
+        position: absolute;
+        right: 28px;
+        top: 27px;
+        color: #b0bec5;
+        font-size: 16px;
+    }
+}
+.circle_images{
+    margin-right: 15px;
+}
+.circle_info{
+    &-name{
+        @include f500;
+        color: $bg;
 
+    }
+    &-theme{
+        @include f500;
+        color: $green;
+    }
+    &-price{
+        @include f500;
+        color: #000;
+        font-size: 16px;
+    }
+    &-date{
+        color: #707070;
+        font-size: 10px;
+    }
+}
+.basket_suminfo{
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-top: none;
+    padding: 16px 16px 12px;
+}
+.basket_title{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 13px;
+    padding-right: 22px;
+    margin-top: 15px;
+    @include f700;
+    font-size: 16px;
+    color: $bg;
+}
+.basket_btn{
+    @include f700;
+    color: #fff;
+    font-size: 14px;
+    padding: 12px 5px;
+    background-color: $green;
+    text-align: center;
+    width: 100px;
+}
+.basket_btn-сhekout{
+    width: 123px;
+    margin-left: 6px;
+    background-color: $tomate;
+}
+.notification_menu,
+.message_menu{
+    .circle_images{
+        margin-right: 20px;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+    }
+    .circle_info{
+        line-height: 18px;
+    }
+}
+.icons-color::before{
+    color: $tomate;
+}
+.header_btn-menu{
+    display: none;
+    font-family: 'icomoon';
+}
 //end header
 //start search
 .search{
@@ -257,6 +510,7 @@
     display: flex;
     align-items: center;
     font-size: 12px;
+    z-index: 1;
     span{
         color: $bg;
     }
@@ -548,3 +802,5 @@
     }
 }
 //end footer
+
+@import 'media';
