@@ -10,6 +10,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap" rel="stylesheet"> 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css">
 	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
 	<link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -149,7 +150,8 @@
 						</ul>
 					</div>
 				</div>
-				<a class="header_btn header_btn-login header_btn-login--off" href="#">Login</a>
+				<!-- header_btn-login--off -->
+				<a data-fancybox class="header_btn header_btn-login" href="#" id="loginbtn">Login</a>
 				<a class="header_btn header_btn-logout header_btn-login--on" href="#">Logout</a>
 				<a class="header_btn header_btn-register header_btn-login--off" href="#">Register</a>
 				</div>
@@ -867,10 +869,32 @@
 				</div>
 			</div>
 		</div>
+		<div id="modal" style="display: none;">
+			<div class="login_wrapper">
+				<div class="login_title">
+					Login
+				</div>
+				<form>
+					<label class="login_label login_label-name">
+						<input type="text" placeholder="Name" required>
+					</label>
+					<label class="login_label login_label-pass">
+						<input type="text" placeholder="Password" required>
+					</label>
+					<button type="submit">Submit</button>
+					<a class="creat-acc" href="#">Creat An Accound</a>
+					<a class="lost-pass" href="#">Lost Password?</a>
+				</form>
+			</div>
+		</div>
 	</footer>
+
+	
 	<script src="js/jquery-3.5.1.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
 	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+	
 	<script src="js/libs.min.js"></script>
 	<script src="js/main.js"></script>
 

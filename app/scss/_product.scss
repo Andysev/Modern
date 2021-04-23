@@ -1,0 +1,406 @@
+.productmenu{
+    background-color: $grey;
+}
+.localmenu_text{
+    display: flex;
+    justify-content: start;
+    padding: 50px 0 50px;
+    font-size: 16px;
+
+}
+.localmenu_text-home{
+    color: #afbdc4;
+}
+.localmenu_text-product{
+    color: $bg;
+    margin-left: 16px;
+}
+//Product start
+.productone{
+    background-color: $grey;
+}
+.productone_content{
+    max-width: 824px;
+    width: 100%;
+    padding-bottom: 126px;
+}
+.product_image{
+    padding: 20px 23px;
+    width: 832px;
+    height: 424px;
+    background-color: #fff;
+}
+.productone_imagein{
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.productone_title{
+    margin-top: 45px;
+    font-size: 30px;
+    @include f700;
+    color: $bg;
+}
+.productone_text{
+    font-size: 16px;
+    margin-top: 38px;
+
+}
+.socialfacebook{
+    height: 52px;
+    width: 52px;
+    background-color: #6370b6;
+    position: relative;
+    &::before{
+    position: absolute;
+    content: "\f09a";
+    font-family: 'icomoon';
+    color: #fff;
+    font-size: 20px;
+    top: 13px;
+    left: 20px;
+    }
+}
+.socialtwitter{
+    height: 52px;
+    width: 52px;
+    background-color: #64b5f6;
+    position: relative;
+    &::before{
+    position: absolute;
+    content: "\f099";
+    font-family: 'icomoon';
+    color: #fff;
+    font-size: 20px;
+    top: 13px;
+    left: 20px;
+    }
+}
+.sociallinkid{
+    height: 52px;
+    width: 52px;
+    background-color: #4f71ce;
+    position: relative;
+    &::before{
+    position: absolute;
+    content: "\f0e1";
+    font-family: 'icomoon';
+    color: #fff;
+    font-size: 20px;
+    top: 13px;
+    left: 20px;
+    }
+}
+.socialpinterest{
+    height: 52px;
+    width: 52px;
+    background-color: #d32f2f;
+    position: relative;
+    &::before{
+    position: absolute;
+    content: "\f231";
+    font-family: 'icomoon';
+    color: #fff;
+    font-size: 20px;
+    top: 13px;
+    left: 20px;
+    }
+}
+.productbuttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 46px;
+}
+.productbuttons_doc{
+    a{
+        & + a{
+            margin-left: 23px;
+        }
+        
+    }
+}
+.livePreview{
+    border: none;
+    padding: 20px 33px;
+    background-color: $red;
+    color: #fff;
+    font-size: 16px;
+}
+.buttonscreens{
+    border: none;
+    padding: 20px 33px;
+    background-color: #455a64;
+    color: #fff;
+    font-size: 16px;
+}
+.buttondocumentation{
+    border: none;
+    padding: 20px 33px;
+    background-color: $green;
+    color: #fff;
+    font-size: 16px;
+}
+.product_table{
+    margin-top: 59px;
+    font-size: 16px;
+    background-color: #fff;
+    position: relative;
+}
+.product_table-titles{
+   display: flex;
+}
+.product_table-title{
+    border: 1px solid #d7d7d7;
+    padding: 22px 66px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.table-active{
+    border: 1px solid #d7d7d7;
+    border-bottom: 2px solid $green;
+}
+.product_table-text{
+    padding: 44px 40px;
+    column-count: 2;
+    background-color: #fff;
+    ul{
+        display: none;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: 330px;
+    }
+    li{
+        width: 100%;
+        max-width: 270px;
+    }
+}
+.angle-right{
+    position: relative; 
+    padding-left: 15px;
+    &::before{
+        content: "\f105";
+        color: #8bc34a;
+        position: absolute;
+        left: 0;
+        font-size: 18px;
+        font-family: 'icomoon';
+    }
+}
+.moreproducts{
+    font-size: 18px;
+    @include f500;
+    width: 100px;
+    margin-top: 43px;
+    padding: 20px 28px;
+    background-color: #fff;
+    width: 100%;
+}
+.miniproductitems{
+    margin-top: 49px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 877px;
+    width: 100%;
+}
+.miniproductitem{
+    margin-bottom: 30px;
+    height:90px;
+    max-width: 249px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.miniproduct-image{
+    height: 89px;
+    width: 80px;
+    background-repeat: no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.miniproduct_text{
+    padding: 7px 17px;
+    background-color: #fff;
+    &-title{
+        font-size: 14px;
+    }
+    &-theme{
+        margin-top: 5px;
+    }
+    &-price{
+        margin-top: 5px;
+        font-size: 18px;
+        @include f500;
+    }
+}
+.productone_inner{
+    display: flex;
+}
+.productone_aside{
+    max-width: 270px;
+    margin-left: 33px;
+}
+.asideProductPrice{
+    background-color: #fff;
+    padding: 27px 30px;
+    .asideProductPrice_title{
+        font-size: 20px;
+        @include f500;
+    }
+    .line-grey{
+        max-width: 203px;
+        width: 100%;
+        border-bottom: 2px solid $grey;
+        margin-top: 10px;
+    }
+    .asideProductPrice_price{
+        margin-top: 37px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .asideProductPrice-num{
+        font-size: 22px;
+        color: $tomate
+    }
+    .asideProductPrice_buttons{
+        margin-top: 37px;
+        display: flex;
+        flex-direction: column;
+        a{
+            margin-top: 5px;
+        }
+    }
+    .addToCart{
+        max-width: 210px;
+        width: 100%;
+        padding: 18px 40px;
+        background-color: $green;
+        color: #fff;
+        font-size: 16px;
+        text-align: center;
+        &::before{
+        content: "\f07a";
+        color: #fff;
+        position: absolute;
+        left: 0;
+        font-size: 18px;
+        font-family: 'icomoon';
+        }
+    }
+    .addToFavorite{
+        max-width: 210px;
+        width: 100%;
+        padding: 18px 40px;
+        background-color: #42a5f5;
+        color: #fff;
+        font-size: 16px;
+        text-align: center;
+        &::before{
+        content: "\f004";
+        color: #fff;
+        position: absolute;
+        left: 0;
+        font-size: 18px;
+        font-family: 'icomoon';
+        }
+    }
+    .buyNow{
+        max-width: 210px;
+        width: 100%;
+        padding: 18px 40px;
+        background-color: #546e7a;
+        color: #fff;
+        font-size: 16px;
+        text-align: center;
+    }
+}
+.asideProductAuthor{
+    background-color: #fff;
+    padding: 27px 30px;
+    margin-top: 22px;
+    .asideProductAuthor_title{
+        font-size: 20px;
+        @include f500;
+    }
+    .asideProductAuthor_profile{
+        display: flex;
+        flex-direction: row;
+        margin-top: 22px;
+    }
+    .asideProductAuthor_profile-img{
+       width: 72px;
+       height: 72px;
+    }
+    .asideProductAurhortext{
+        margin-left: 17px;
+    }
+    .asideProductAuthor_profile-btn{
+        margin-top: 25px;
+        a{
+            max-width: 91px;
+            max-height: 29px;
+            border: 1px solid $grey;
+            text-align: center;
+            font-size: 13px;
+        }
+    }
+    .asideProductAuthor_icons{
+        margin-top: 22px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        max-width: 210px;
+        flex-wrap: wrap;
+    }
+        .smile{
+            background-color: #ffb74d;
+            width: 35px;
+            height: 35px;
+            position: relative;
+        }
+        .smile::before{
+            content: "\f118";
+        color: #fff;
+        position: absolute;
+        left: 0;
+        font-size: 18px;
+        font-family: 'icomoon';
+        }
+        .yana{
+            background-color: #cfd8dc;
+            width: 35px;
+            height: 35px;
+            position: relative;
+        }
+        .yana::before{
+        content: "\f157";
+        color: #fff;
+        position: absolute;
+        left: 0;
+        font-size: 18px;
+        font-family: 'icomoon';
+        }
+}
+.asideProduct_sales{
+    background-color: #fff;
+    padding: 27px 35px;
+    margin-top: 22px;
+
+    .asideProduct_sales-price{
+        position: relative;
+       
+        &::before{
+            content: "\f07a";
+           
+            position: absolute;
+            left: -25px;
+            font-size: 18px;
+            font-family: 'icomoon';
+        }
+    }
+
+}

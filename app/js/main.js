@@ -32,6 +32,24 @@ $(document).ready(function(){
       $('.menu').slideToggle('');
       $('.menu_list').slideToggle('');
     });
-
+    $('#loginbtn').click(function(){
+      $.fancybox.open({
+        src: '#modal',
+        type: 'inline'
+      });
+    });
+    
+    $('.product_table .product_table-title').on('click', function(event) {
+      var id = $(this).attr('data-id');
+        $('.product_table').find('.product-text').removeClass('active-tab').hide();
+        $('.product_table .product_table-titles').find('.tab').removeClass('active');
+        $(this).addClass('active');
+        $('#'+id).addClass('active-tab').fadeIn();
+        
+        $('.product_table .product_table-titles').find('.table-active').removeClass('table-active');
+        $(this).addClass('table-active');
+        
+        return false;
+      });
       var mixer = mixitup('.products_inner-box');
 });
