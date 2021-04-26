@@ -322,6 +322,12 @@
     background-color: #fff;
     padding: 27px 30px;
     margin-top: 22px;
+    .line-grey{
+        max-width: 203px;
+        width: 100%;
+        border-bottom: 2px solid $grey;
+        margin-top: 10px;
+    }
     .asideProductAuthor_title{
         font-size: 20px;
         @include f500;
@@ -366,21 +372,68 @@
             content: "\f118";
         color: #fff;
         position: absolute;
-        left: 0;
+        left: 9px;
+        top: 4px;
         font-size: 18px;
         font-family: 'icomoon';
         }
-        .yana{
+        .list{
+            background-color: $green;
+            width: 35px;
+            height: 35px;
+            position: relative;
+        }
+        .list::before{
+            content: "\f18c";
+        color: #fff;
+        position: absolute;
+        left: 9px;
+        top: 4px;
+        font-size: 18px;
+        font-family: 'icomoon';
+        }
+        .spark{
+            background-color: $tomate;
+            width: 35px;
+            height: 35px;
+            position: relative;
+        }
+        .spark::before{
+            content: "\f0e7";
+        color: #fff;
+        position: absolute;
+        left: 14px;
+        top: 4px;
+        font-size: 18px;
+        font-family: 'icomoon';
+        }
+        .f{
+            background-color: #66bb6a;
+            width: 35px;
+            height: 35px;
+            position: relative;
+        }
+        .f::before{
+            content: "\f180";
+        color: #fff;
+        position: absolute;
+        left: 11px;
+        top: 4px;
+        font-size: 18px;
+        font-family: 'icomoon';
+        }
+        .yena{
             background-color: #cfd8dc;
             width: 35px;
             height: 35px;
             position: relative;
         }
-        .yana::before{
+        .yena::before{
         content: "\f157";
         color: #fff;
         position: absolute;
-        left: 0;
+        left: 12px;
+        top: 4px;
         font-size: 18px;
         font-family: 'icomoon';
         }
@@ -389,9 +442,14 @@
     background-color: #fff;
     padding: 27px 35px;
     margin-top: 22px;
-
+    display: flex;
+    &-text{
+        margin-left: 13px;
+    }
     .asideProduct_sales-price{
         position: relative;
+        @include f500;
+        font-size: 20px;
        
         &::before{
             content: "\f07a";
@@ -403,4 +461,35 @@
         }
     }
 
+}
+.asideProducinfo{
+    background-color: #fff;
+    padding: 27px 30px;
+    margin-top: 22px;
+    .line-grey{
+        max-width: 203px;
+        width: 100%;
+        border-bottom: 2px solid $grey;
+        margin-top: 10px;
+    }
+}
+.asideProducinfo-title{
+    font-size: 20px;
+    @include f500;
+}
+.asideProducinfo-text{
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    width: 100%;
+    span{
+        @include f500;
+        width: 100%;
+        max-width: 105px;
+        display: flex;
+        & + span{
+            margin-top: 25px;
+        }
+    }
 }
