@@ -51,5 +51,32 @@ $(document).ready(function(){
         
         return false;
       });
+      $('.settings_tabs .tab').on('click', function(event) {
+        var id = $(this).attr('data-id');
+          $('.settings_tabs .tab_content').find('.tab-item').removeClass('active-item').hide();
+          $('.settings_tabs .tabs').find('.tab').removeClass('active');
+          $(this).addClass('active');
+          $('#'+id).addClass('active-item').fadeIn();
+          
+          $('.settings_tabs .tabs').find('.tab-active').removeClass('tab-active');
+          $(this).addClass('tab-active');
+          
+          return false;
+        });
+        $('.profile_tabs .tab').on('click', function(event) {
+          var id = $(this).attr('data-id');
+            $('.profile_content .tab_content').find('.tab-item').removeClass('active-item').hide();
+            $('.profile_tabs .tabs').find('.tab').removeClass('active');
+            $(this).addClass('active');
+            $('#'+id).addClass('active-item').fadeIn();
+            
+            $('.profile_tabs .tabs').find('.tab-active').removeClass('tab-active');
+            $(this).addClass('tab-active');
+            
+            return false;
+          });
+        
+          $('input, select').styler();
+         
       var mixer = mixitup('.products_inner-box');
 });

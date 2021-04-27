@@ -23,7 +23,8 @@ gulp.task('css', function(){
 	  'node_modules/normalize.css/normalize.css',
 	  'node_modules/slick-carousel/slick/slick.css',
 	  'node_modules/magnific-popup/dist/magnific-popup.css',
-	  'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css'
+	  'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css',
+	  
 	])
 	  .pipe(concat('_libs.scss'))
 	  .pipe(gulp.dest('app/scss'))
@@ -40,8 +41,8 @@ gulp.task('js', function(){
 	return gulp.src([
 		'node_modules/slick-carousel/slick/slick.js',
 		'node_modules/magnific-popup/dist/jquery.magnific-popup.js',
-		'node_modules/mixitup/dist/mixitup.js',
-		'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js'
+		'node_modules/jquery-form-styler/dist/jquery.formstyler.min.js',
+		'node_modules/mixitup/dist/mixitup.js'
 		
 	])
 	.pipe(concat('libs.min.js'))
@@ -61,7 +62,7 @@ gulp.task('browser-sync', function() {
 gulp.task('watch', function(){
 	gulp.watch('app/scss/**/*.scss', gulp.parallel('scss'));
 	gulp.watch('app/*.html', gulp.parallel('html'));
-	gulp.watch('app/js/*.js', gulp.parallel('js'))
+	// gulp.watch('app/js/*.js', gulp.parallel('js'))
 	});
 
 
