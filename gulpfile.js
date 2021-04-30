@@ -23,8 +23,7 @@ gulp.task('css', function(){
 	  'node_modules/normalize.css/normalize.css',
 	  'node_modules/slick-carousel/slick/slick.css',
 	  'node_modules/magnific-popup/dist/magnific-popup.css',
-	  'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css',
-	  
+	  'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css'
 	])
 	  .pipe(concat('_libs.scss'))
 	  .pipe(gulp.dest('app/scss'))
@@ -43,12 +42,11 @@ gulp.task('js', function(){
 		'node_modules/magnific-popup/dist/jquery.magnific-popup.js',
 		'node_modules/jquery-form-styler/dist/jquery.formstyler.min.js',
 		'node_modules/mixitup/dist/mixitup.js'
-		
 	])
 	.pipe(concat('libs.min.js'))
 	.pipe(uglify())
 	.pipe(gulp.dest('app/js'))
-	// .pipe(browserSync.reload({stream: true}))
+	.pipe(browserSync.reload({stream: true}))
 	});
 
 gulp.task('browser-sync', function() {

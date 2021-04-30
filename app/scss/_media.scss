@@ -1,3 +1,31 @@
+@media (max-width: 1200px){
+    .withdrawal_inner{
+        flex-direction: column;
+    }
+    .withdrawal_inner-box{
+        margin-bottom: 15px;
+    }
+    .withdrawals_content-item{
+        max-width: 490px;
+    }
+    .contac_form-row{
+        display: block;
+    }
+    .contact_form input{
+        width: 100%;
+    }
+}
+@media (max-width: 1020px){
+    .settings_tabs{
+        display: block;
+        .tabs{
+            max-width: 100%;
+        }
+    }
+    .settings_tab_content{
+        margin-top: 20px;
+    }
+}
 @media (max-width: 1150px){
     .footer_inner{
         flex-wrap: wrap;
@@ -8,6 +36,32 @@
     .footer_col-adress{
         margin-bottom: 30px;
         min-width: 100%;
+    }
+    .productone_inner{
+        flex-direction: column;
+        align-items: center;
+    }
+    .productone_content{
+        padding-bottom: 15px;
+    }
+    .slick-track{
+        width: 800px;
+    }
+}
+@media (max-width: 960px){
+    .page404_404::after{
+        content: "";
+        position: absolute;
+        background-image: url(../img/man404.png);
+        width: 50px;
+        height: 97px;
+        background-size: cover;
+    }
+}
+@media (max-width: 925px){
+    .products_inner-box{
+        flex-direction: column;
+        align-items: center;
     }
 }
 @media (max-width: 900px){
@@ -22,6 +76,45 @@
             margin-left: 40px;
         }
     }
+    .contact_box{
+        display: block;
+    }
+    .profile_inner{
+        flex-direction: column;
+        
+    }
+    .profile_content{
+        order: -1;
+        margin-bottom: 20px;
+    }
+    .profile_aside{
+        display: flex;
+        flex-direction: row;
+        margin-top: -20px;
+        align-items: center;
+        .profile_buttons-send,
+        .profile_buttons-follow{
+            width: 120px;
+            padding: 3px 30px;
+            &::before{
+                left: 9px;
+            }
+        }
+        .profile_buttons{
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+        .footer_social-link{
+            margin-left: 5px;
+        }
+        .link-facebook{
+            background-position: -37px -5px;
+        }
+        .footer_social-link a{
+            width: 35px;
+        }
+    }
+
 }
 @media (max-width: 840px){
     .menu_list{
@@ -40,12 +133,199 @@
             }
         }
     }
+    .upload_line{
+        display: block;
+        label{
+            display: inline-block;
+            margin-bottom: 5px;
+        }
+    }
+    .upload_inner-content{
+        button{
+            margin-left: 0;
+        }
+    }
+}
+@media (max-width: 840px){
+    .rate-star{
+        left: 23px;
+    }
+    .asideCategories, 
+    .asidePriceRange, 
+    .asideTopSellers{
+        padding: 12px 22px;
+    }
+}
+@media (max-width: 810px){
+    .product_table-title{
+        padding: 22px 50px;
+        width: 25%;
+    }
+    .tutorial{
+        padding: 40px 0 40px;
+    }
+    .tutorial_inner{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media (max-width: 780px){
+    .productbuttons_doc{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        button{
+            width: 160px;
+            
+        }
+    }
+    .productbuttons_doc{
+        a + a{margin-left: 0;}
+    }
+    .productbuttons_social{
+        margin-left: 15px;
+    }
+    
+}
+@media (max-width: 740px){
+    .page404_404{
+        font-size: 200px;
+        line-height: 200px;
+    }
+    .page404_title{
+        font-size: 24px;
+        margin-bottom: 20px;
+        line-height: 30px;
+    }
+    .page404_text{
+        font-size: 15px;
+        margin-bottom: 40px;
+    }
+    .page404_link{
+        padding: 10px 30px 8px;
+    }
+}
+@media (max-width: 660px){
+    .products{
+        padding: 20px 0;
+    }
+    .products_inner-btn{
+        margin-bottom: 30px;
+        button{
+            margin-bottom: 7px;
+        }
+    }
+    .products_title,
+    .tutorial_title{
+        font-size: 26px;
+        line-height: 42px;
+    }
+    .author_box{
+        flex-direction: column;
+        align-items: center;
+    }
+    .author_title{
+        text-align: center;
+        margin-right: 0;
+    }
+    .author{
+        min-height: 560px;
+    }
 }
 @media (max-width: 640px){
     .notification_box,
     .message_box{
         display: none;
     }
+    .profile_aside{
+        display: flex;
+        flex-direction: column;
+    }
+    .profile_inner{
+        align-items: center;
+    }
+    .profile_buttons{
+        display: flex;
+        a{
+            margin-right: 5px;
+        }
+    }
+    .product_table-title{
+        padding: 10px 30px;
+        width: 25%;
+    }
+    .search{
+        min-height: 413px;
+    }
+    .search_inner-title{
+        font-size: 35px;
+        line-height: 33px;
+    }
+}
+@media (max-width: 620px){
+    .newitems_inner{
+        flex-direction: column;
+        align-items: center;
+    }
+    .newitems_star{
+        display: block;
+    }
+}
+@media (max-width: 600px){
+    .page404_inner{
+        padding: 0 15px;
+    }
+    .page404_404{
+        font-size: 120px;
+        line-height: 120px;
+    }
+    .page404_404::after{
+        content: "";
+        margin-left: 0;
+        top: 16px;
+        right: 0;
+    }
+    .upload_inner-content{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .upload_inner-title{
+        padding: 16px 10px 18px;
+    }
+    .settings_box-item{
+        display: block;
+        label{
+            display: inline-block;
+            margin-right: 5px;
+        }
+    }
+    .settings_box-content{
+        padding: 20px 10px 50px;
+    }
+    .settings_box-title{
+        padding: 18px 10px;
+        border-bottom: 1px solid #dedede;
+    }
+    .contact_inner{
+        padding: 35px 10px 15px;
+    }
+    .contact_head{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .container{
+        padding: 0 8px;
+    }
+    .contact_map iframe{
+        width: 100%;
+        height: 300px;
+    }
+    .newitems_star{
+        display: block;
+        left: 0;
+        top: 0;
+    }
+   
 }
 @media (max-width: 540px){
     .footer_col{
@@ -56,6 +336,28 @@
              margin-left: 0;
              margin-top: 30px;
          }
+     }
+    .withdrawal_inner-content{
+        padding-left: 7px;
+        padding-right: 7px;
+     }
+     .withdrawals_content-items{
+         overflow-x: scroll;
+     }
+     .withdrawals_content-item{
+         padding: 0 7px;
+         min-width: 425px;
+     }
+     .profile_info-starnum{
+        margin-top: 30px;
+        position: initial;
+     }
+     .advantages{
+         padding: 18px 0;
+     }
+     .advantages_title{
+         font-size: 26px;
+         line-height: 42px;
      }
 }
 @media (max-width: 520px){
@@ -159,6 +461,22 @@
     .header_top_inner{
         height: 70px;
     }
+    .miniproductitems{
+        justify-content: center;
+    }
+    .product_table-title{
+        padding-left: 12px;
+        padding-right: 12px;
+
+    }
+    .profile_info-star{
+        width: 60px;
+        position: initial;
+        margin-top: 0;
+        margin-right: 0;
+        top: 0;
+        left: 0;
+    }
 }
 @media (max-width: 495px) {
     .user_info{
@@ -167,6 +485,20 @@
     .user_images{
         margin-right: 0;
     }
+    .about_head{
+        padding: 23px 10px;
+    }
+    .about_inner{
+        padding: 0 10px;
+    }
+    .product_image{
+        height: 285px;
+    }
+    .advantages_items{
+        flex-direction: column;
+        align-items: center;
+    }
+    
 }
 @media (max-width: 456px){
     .menu{
@@ -178,11 +510,19 @@
             font-size: 13px;
         }
     }
-    .header_btn{
-
+   
+    .profile_info-text{
+        font-size: 12px;
     }
 }
-
+@media (max-width: 390px){
+    
+    .profile_info-starnum{
+        left: 5px;
+    }
+    
+    
+}
 @media (max-width: 390px){
     .header_box{
         &.active{
@@ -200,6 +540,11 @@
     .user{
         margin-left: 10px;
         margin-right: 0;
+    }
+    .product_table-title{
+        padding: 10px 0;
+        text-align: center;
+        font-size: 14px;
     }
 }
 @media (max-width: 320px){
